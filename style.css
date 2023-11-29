@@ -1,0 +1,90 @@
+body {
+    margin: 0px;
+    background-color: black;
+    color: orange;
+    height: 100vh;
+}
+
+section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+
+h1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.basic_nav_bar_ID {
+    margin-right: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    gap: 2rem;
+    list-style: none;
+}
+
+.basic_menu_ID {
+    display: none;
+    height: 1rem;
+}
+
+.variable_nav_bar_ID {
+    margin-right: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    gap: 2rem;
+    list-style: none;
+}
+
+.variable_menu_ID {
+    display: none;
+    height: 1rem;
+}
+
+.open_menu {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 12;
+    height: 1rem;
+}
+
+.show_nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    margin: auto;
+    justify-content: center;
+    position: -webkit-sticky;
+    position: fixed;
+    background-color: white;
+    top: 0;
+}
+
+@media screen and (max-width: 480px) {
+    .variable_menu_ID {
+        display: block;
+        height: 2rem;
+        margin: auto;
+        margin-right: 1rem;
+        margin-top: 1rem;
+    }
+
+    .variable_nav_bar_ID {
+        display: none;
+    }
+}
