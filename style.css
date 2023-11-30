@@ -1,3 +1,4 @@
+/*Basic*/
 body {
     margin: 0px;
     background-color: black;
@@ -13,12 +14,6 @@ section {
     gap: 1em;
 }
 
-nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: end;
-}
-
 h1 {
     display: flex;
     flex-direction: column;
@@ -26,63 +21,82 @@ h1 {
     align-items: center;
 }
 
-.basic_nav_bar_ID {
-    margin-right: 2rem;
+/*Basic dropdown*/
+.basic_nav_bar {
     display: flex;
     flex-direction: row;
-    justify-content: end;
-    gap: 2rem;
+    justify-content: flex-end;
+    align-items: flex-end;
+    text-align: end;
+}
+
+.basic_nav_list {
     list-style: none;
+    padding: 5px 0 5px 0;
 }
 
-.basic_menu_ID {
-    height: 1rem;
-}
-
-.variable_nav_bar_ID {
-    margin-right: 2rem;
+.basic_button {
     display: flex;
-    flex-direction: row;
-    justify-content: end;
-    gap: 2rem;
-    list-style: none;
 }
 
-.variable_menu_ID {
-    height: 1rem;
+.basic_nav_hidden {
+    display: none;
+    padding: 0 1em 1em 0;
 }
 
-.open_menu {
-    position: fixed;
-    top: 1rem;
-    right: 1rem;
-    z-index: 12;
-    height: 1rem;
+.basic_nav_show {
+    display: inline;
+    padding: 0 1em 1em 0;
 }
 
-.show_nav {
+/*Variable dropdown*/
+.variable_nav_bar {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 100vh;
-    margin: auto;
     justify-content: center;
-    position: -webkit-sticky;
-    position: fixed;
-    background-color: white;
-    top: 0;
+    align-items: center;
 }
 
-@media screen and (max-width: 480px) {
-    .variable_menu_ID {
-        display: block;
-        height: 2rem;
-        margin: auto;
-        margin-right: 1rem;
-        margin-top: 1rem;
+.variable_nav_list {
+    list-style: none;
+    padding: 5px 0 5px 0;
+    gap: 1em;
+}
+
+.variable_button {
+    display: none;
+}
+
+.variable_nav_hidden {
+    display: none;
+    padding: 0 1em 1em 0;
+}
+
+.variable_nav_show {
+    display: inline;
+    padding: 0 1em 1em 0;
+}
+
+
+@media (max-width: 426px) {
+    .variable_nav_show {
+        display: none;
+        padding: 0 1em 1em 0;
     }
 
-    .variable_nav_bar_ID {
-        display: none;
+    .variable_nav_bar {
+        flex-direction: column-reverse;
+        justify-content: flex-end;
+        align-items: flex-end;
+        text-align: end;
+    }
+
+    .variable_button {
+        display: flex;
+    }
+
+    .variable_nav_hidden {
+        display: flex;
+        flex-direction: column;
+        padding: 0 1em 1em 0;
     }
 }
